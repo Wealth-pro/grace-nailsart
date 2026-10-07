@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ 
+    scroll-behavior:smooth;
+
+}
+
+body{
+     font-family: 'Inter', sans-serif;
+     color:#17202a;
+
+     background: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.navbar{
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    background: white;
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 2px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon{
+    width: 43px;
+    height: 43px;
+    border: 2px solid #f24d91;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f24d91;
+}
+
+.logo h2{
+    font-family:"Parisienne", cursive;
+    color: #ed4085;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.logo-span{
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    display: block;
+    font-size: 7px;
+    letter-spacing: 3px;
+    color:#e66a9d;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a{
+    font-size: 13px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover{
+        color: #f04489;
+}
+
+nav a.index::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f04489;
+}
+
+.menu-btn{
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: #ed4085;
+}
+
+.mobile-menu{
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px 8%;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.mobile-menu.show{
+    display: flex;
+}
+
+.hero{
+    min-height: 610px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background:
+    radial-gradient(circle at 20% 40%, #fff5fa,
+    transparent 50% ),
+    linear-gradient(120deg, #fff,#ffeaf3 );
+
+    overflow: hidden;
+    margin-top: 2x;
+}
+
+.hero-content{
+    background: #fff5f9;
+    padding: 70px 10%; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-badge{
+    width: fit-content;
+    padding: 9px 15px;
+    border-radius: 30px;
+    background: white;
+    color: #ef4789;
+    font-size: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    margin-bottom: 2px;
+}
+
+.small-badge span{
+    margin: 0 5px;
+}
+
+.hero h1{
+    font-family:"DM Serif Display",serif;
+    font-size:70px;
+    font-weight: 400;
+    color: #17202a;
+}
+
+.hero h1 span{
+    display: block;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 90px;
+    color: #ee4387;
+    margin: 25px 0;
+    margin-top: 1px;
+    line-height: 1;
+}
+
+.hero-content p{
+    max-width: 500px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5c626a;
+    margin: 25px 0;
+    margin-top: 2px;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.footer-btn,
+.btn-primary{
+    background: linear-gradient(
+        135deg,
+        #f54891,
+        #e66a9d
+    );
+    font-family: "perisienne", cursive ;
+    color: white;
+    border-radius: 30px;
+    padding: 13px 22px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0 8px 25px rgba(238,62,132,0.22);
+    transition: 0.3s;
+}
+
+.footer-btn:hover,
+.btn-primary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(238,62,132,0.35);
+    color:#17202a;
+}
+
+.btn-secondary{
+    padding: 13px 22px;
+    border:1px solid #f04a8c;
+    color: #ef4789;
+    border-radius: 30px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap:10px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover{
+    background: #fff;
+    transform:translateY(-3px)
+}
+
+.hero-features{
+    display: flex;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.feature{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-icon{
+    color: #f04888;
+    font-size: 18px;
+    margin-bottom: 28px;
+    margin-left: 12px;
+}
+
+.feature strong{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.feature small{
+    font-size: 12px;
+    color: #777;
+}
+
+.hero-image{
+    position:relative;
+    width: 100%;
+    height: 610px;
+    overflow: hidden;
+
+}
+
+.hero-image img{
+    display: block;
+    height: 190%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position:center;
+}
+
+.hero-image::before {
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:25%;
+    height: 100%;
+    z-index: 2;
+
+    background: linear-gradient(to right, #fff5f9 0%,
+    rgba(255, 245, 249, 0.8) 25%,
+    rgba(255, 245, 249, 0.35)55%,
+    transparent 100%
+    );
+}
+
+.hero-image::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient
+    (90deg, 
+    rgba(253, 41, 182, 0.849)
+    transparent 30%);
+}
+
+.hero-decoration{
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    z-index: 2;
+    color:#ed4085;
+    font-family: "Parisienne", cursive;
+    font-size: 16px;
+    line-height: 0.95;
+    text-align: center;
+    transform:rotate(-22deg);
+}
+
+.hero-decoration span{
+    font-size: 16px;
+}
+
+footer{
+    background: radial-gradient(circle at 10% 50%, #ff8db8, transparent 35%),
+     linear-gradient(120deg, #ef4b91, #f96ea9);
+     color: white;
+     padding: 15px 10%;
+     overflow:hidden;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr;
+    align-items: center;
+    gap:40px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-icon{
+    font-size: 45px;
+}
+
+.footer-logo h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 22px;
+}
+
+.footer-logo p{
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.footer-action{
+    text-align: center;
+}
+
+.footer-btn{
+    background: white;
+    color: #ed4385;
+    box-shadow:none;
+}
+
+.social{
+    display:flex;
+    justify-content: center;
+    gap:17px;
+}
+.socials a{
+    font-size: 20px;
+    color:#17202a;
+}
+
+.footer-message{
+    font-family: "Parisienne", cursive;
+    font-size: 22px;
+    text-align: right;
+    transform:rotate(-18deg);
+}
+
+.footer-message span{
+    font-size: 20px;
+}
+
+@media(max-width:740px){
+
+    nav,
+    nav-button{
+        display:none;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    .hero{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content{
+        padding: 70px 8%;
+    }
+
+    .hero-image{
+        height:500px
+    }
+
+    .hero h1{
+        font-size: 48px;
+    }
+
+    .hero-buttons{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .hero-buttons a{
+        justify-content: center;
+    }
+
+    .logo-icon{
+        font-size:22px
+    }
+
+    .logo h2{
+        font-size:28px;
+    }
+    .logo span{
+        font-size:28px;
+    }
+
+    .small-badge{
+        font-size: 18px;
+    }
+    .small-badge span{
+    margin: 0 10px;
+    }
+
+    .hero-content p{
+        font-size: 20px;
+    }
+
+    .btn-secondary{
+        font-size:19px;
+    }
+
+.hero-features{
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature-icon{
+    font-size: 22px;
+}
+
+.feature strong{
+    font-size: 26px;
+}
+
+.feature small{
+    font-size: 20px;
+}
+
+.footer-icon{
+    font-size: 20px;
+}
+
+.footer-logo{
+    justify-content: center;
+}
+.footer-logo h2 {
+    font-size: 22px;
+}
+
+.footer-logo p{
+    font-size: 18px;
+}
+
+.footer-message{
+    font-size: 18px;
+    text-align: center;
+}
+.footer-message span{
+    font-size: 16px;
+}
+
+.footer-content{
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+}
